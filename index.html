@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+    <style>
+        /* Basic reset and full-height background */
+        
+        * {
+            margin: 100;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://i.postimg.cc/MGZr5MLP/standard-1.gif') no-repeat center center fixed;
+            background-size: cover;
+        }
+        /* Background overlay for readability */
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(105, 74, 74, 0);
+            z-index: -1;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        /* Video description text */
+        /* Card container with glowing border and hover animation */
+        
+        .card {
+            background-color: transparent;
+            padding: 50px;
+            border-radius: 0px;
+            border: 2px solid rgba(89, 0, 255, 0);
+            /* Red border with glow */
+            box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            text-align: center;
+            position: center;
+            z-index: 1;
+            animation: hover 3s ease-in-out infinite alternate;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        /* Glowing effect for the card's border */
+        /* Card title */
+        
+        .card h1 {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        /* Text styling for "Join our community..." */
+        
+        .community-text {
+            font-size: 15px;
+            color: #ffffff;
+            /* Example: yellow color for the text */
+            margin-bottom: 20px;
+        }
+        /* Social media button styling */
+        
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            /* Space between buttons */
+            margin-bottom: 20px;
+        }
+        
+        .social-button {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-button:hover {
+            transform: scale(1.2);
+            /* Slight zoom on hover */
+        }
+        /* Individual icon images for Discord, YouTube, GitHub */
+        
+        .discord {
+            background: transparent;
+        }
+        
+        .discord img {
+            width: 30px;
+        }
+        
+        .youtube {
+            background-color: #ff0000;
+            /* Red for YouTube */
+        }
+        
+        .youtube img {
+            width: 30px;
+        }
+        
+        .github {
+            background-color: #333333;
+            /* Black for GitHub */
+        }
+        
+        .github img {
+            width: 30px;
+        }
+        /* Button styling and animation */
+        
+        .download-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000000;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .download-button:hover {
+            background-color: rgb(153, 0, 255);
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(153, 0, 255, 0.6);
+        }
+        /* Floating animation for the card */
+        
+        @keyframes hover {
+            0% {
+                transform: translateY(0px);
+                box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+            }
+            100% {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+            }
+        }
+        /* YouTube video container styling */
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background overlay -->
+    <div class="overlay"></div>
+
+    <div class="card">
+        <h1>Join Us and Download Files</h1>
+
+        <!-- Social Media Buttons in a Row -->
+        <div class="social-buttons">
+            <!-- Discord -->
+            <a href="https://discord.gg/topstore1" target="_blank" class="social-button discord">
+                <img src="https://img.icons8.com/color/48/000000/discord-logo.png" alt="Discord" />
+            </a>
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@firev0x10" target="_blank" class="social-button youtube">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/youtube.png" alt="YouTube" />
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/firevox015" target="_blank" class="social-button github">
+                <img src="https://img.icons8.com/material-outlined/24/ffffff/github.png" alt="GitHub" />
+            </a>
+        </div>
+
+        <!-- Text with custom color -->
+        <p class="community-text">Join our community and download the resources below:</p>
+
+        <!-- Download Button 1 -->
+        <a href="downloads/file1.zip" download="file1.zip" class="download-button">Download File 1</a>
+
+        <!-- Download Button 2 -->
+        <a href="downloads/file2.zip" download="file2.zip" class="download-button">Download File 2</a>
+
+        <!-- Download Button 3 -->
+        <a href="downloads/file3.zip" download="file3.zip" class="download-button">Download File 3</a>
+
+        <!-- Additional Button -->
+        <a href="downloads/file4.zip" download="file4.zip" class="download-button">Download File 4</a>
+
+        <!-- YouTube Video Embed -->
+
+    </div>
+
+
+
+    <div class="card">
+        <h1>Cleaner Showcase</h1>
+        <p class="community-text">"Top Optimizer enhances your gaming by boosting performance and visuals. It cuts lag, improves FPS, and ensures smooth gameplay on all hardware. Enjoy faster, more responsive, immersive, and seamless gameplay with automatic adjustments and optimized
+            settings for top performance!"</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/9l-0KxWqTnc" title="YouTube video" allowfullscreen></iframe>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
